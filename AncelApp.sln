@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AppDemo", "AppDemo\AppDemo.vcxproj", "{DFBF1801-C7BC-4249-87FB-CCA0CCB5814E}"
+	ProjectSection(ProjectDependencies) = postProject
+		{20DAB5FA-4C67-4EF4-8A91-1D3684726EE0} = {20DAB5FA-4C67-4EF4-8A91-1D3684726EE0}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AppLib", "AppLib\AppLib.vcxproj", "{20DAB5FA-4C67-4EF4-8A91-1D3684726EE0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AppTest", "AppTest\AppTest.vcxproj", "{E417B3C5-CD1D-43D7-A725-005D331BEC65}"
+	ProjectSection(ProjectDependencies) = postProject
+		{20DAB5FA-4C67-4EF4-8A91-1D3684726EE0} = {20DAB5FA-4C67-4EF4-8A91-1D3684726EE0}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AppCore", "AppCore\AppCore.vcxproj", "{671ED976-97DB-46F5-9888-F09974AFC5E9}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "CoreTest", "CoreTest\CoreTest.vcxproj", "{F9D77645-0BC5-4463-AE00-14DFA6EB6048}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ToBin", "ToBin\ToBin.vcxproj", "{A4DD5BB9-F3E3-4F2B-804B-C89B6F80578B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RSSApp", "RSSApp\RSSApp\RSSApp.vcxproj", "{A50811D3-356D-4981-B5AC-9C91A949A296}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DFBF1801-C7BC-4249-87FB-CCA0CCB5814E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DFBF1801-C7BC-4249-87FB-CCA0CCB5814E}.Debug|Win32.Build.0 = Debug|Win32
+		{DFBF1801-C7BC-4249-87FB-CCA0CCB5814E}.Release|Win32.ActiveCfg = Release|Win32
+		{DFBF1801-C7BC-4249-87FB-CCA0CCB5814E}.Release|Win32.Build.0 = Release|Win32
+		{20DAB5FA-4C67-4EF4-8A91-1D3684726EE0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{20DAB5FA-4C67-4EF4-8A91-1D3684726EE0}.Debug|Win32.Build.0 = Debug|Win32
+		{20DAB5FA-4C67-4EF4-8A91-1D3684726EE0}.Release|Win32.ActiveCfg = Release|Win32
+		{20DAB5FA-4C67-4EF4-8A91-1D3684726EE0}.Release|Win32.Build.0 = Release|Win32
+		{E417B3C5-CD1D-43D7-A725-005D331BEC65}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E417B3C5-CD1D-43D7-A725-005D331BEC65}.Debug|Win32.Build.0 = Debug|Win32
+		{E417B3C5-CD1D-43D7-A725-005D331BEC65}.Release|Win32.ActiveCfg = Release|Win32
+		{E417B3C5-CD1D-43D7-A725-005D331BEC65}.Release|Win32.Build.0 = Release|Win32
+		{671ED976-97DB-46F5-9888-F09974AFC5E9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{671ED976-97DB-46F5-9888-F09974AFC5E9}.Debug|Win32.Build.0 = Debug|Win32
+		{671ED976-97DB-46F5-9888-F09974AFC5E9}.Release|Win32.ActiveCfg = Release|Win32
+		{671ED976-97DB-46F5-9888-F09974AFC5E9}.Release|Win32.Build.0 = Release|Win32
+		{F9D77645-0BC5-4463-AE00-14DFA6EB6048}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F9D77645-0BC5-4463-AE00-14DFA6EB6048}.Debug|Win32.Build.0 = Debug|Win32
+		{F9D77645-0BC5-4463-AE00-14DFA6EB6048}.Release|Win32.ActiveCfg = Release|Win32
+		{F9D77645-0BC5-4463-AE00-14DFA6EB6048}.Release|Win32.Build.0 = Release|Win32
+		{A4DD5BB9-F3E3-4F2B-804B-C89B6F80578B}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A4DD5BB9-F3E3-4F2B-804B-C89B6F80578B}.Debug|Win32.Build.0 = Debug|Win32
+		{A4DD5BB9-F3E3-4F2B-804B-C89B6F80578B}.Release|Win32.ActiveCfg = Release|Win32
+		{A4DD5BB9-F3E3-4F2B-804B-C89B6F80578B}.Release|Win32.Build.0 = Release|Win32
+		{A50811D3-356D-4981-B5AC-9C91A949A296}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A50811D3-356D-4981-B5AC-9C91A949A296}.Debug|Win32.Build.0 = Debug|Win32
+		{A50811D3-356D-4981-B5AC-9C91A949A296}.Release|Win32.ActiveCfg = Release|Win32
+		{A50811D3-356D-4981-B5AC-9C91A949A296}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

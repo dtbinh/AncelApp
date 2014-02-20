@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{DFBF1801-C7BC-4249-87FB-CCA0CCB5814E}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>AppDemo</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(OPENCV_HOME)\include\opencv2;$(OPENCV_HOME)\include;$(OPENCV_HOME)\include\opencv;$(IncludePath)</IncludePath>
+    <ExecutablePath>C:\OpenCV\install\bin;$(ExecutablePath)</ExecutablePath>
+    <LibraryPath>$(OPENCV_HOME)\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(OGRE_HOME)\include\Ogre\;$(OGRE_HOME)\include\OIS\;$(SolutionDir)Dependencies\GUISDK\include\OgrePlatform\;$(SolutionDir)Dependencies\GUISDK\Common\;$(SolutionDir)Dependencies\GUISDK\include\GUIEngine\;$(SolutionDir)Dependencies\TinyXML\;%(AdditionalIncludeDirectories);$(SolutionDir)Dependencies\;$(SolutionDir)Dependencies\clapack\include\;$(SolutionDir)Applib\include\;$(OGRE_HOME)\boost1461\</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(OGRE_HOME)\lib\debug\;$(SolutionDir)Dependencies\clapack\lib;$(SolutionDir)Dependencies\GUISDK\lib\Debug\;$(SolutionDir)bin\;$(SolutionDir)Dependencies\TinyXML\;$(OGRE_HOME)\boost1461\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>OgreMain_d.lib;OIS_d.lib;AppLib_d.lib;MyGUI.OgrePlatform_d.lib;MyGUIEngine_d.lib;tinyxmlSTL_d.lib;OgreOverlay_d.lib;opencv_core246d.lib;opencv_highgui246d.lib;opencv_imgproc246d.lib;opencv_features2d246d.lib;opencv_calib3d246d.lib;opencv_contrib246d.lib;opencv_ml246d.lib;opencv_objdetect246d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>msvcrt.lib;libcmt.lib;</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(SolutionDir)debug\AppDemo.exe $(SolutionDir)bin\AppDemo_d.exe </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(OGRE_HOME)\include\Ogre\;$(OGRE_HOME)\include\OIS\;$(SolutionDir)Dependencies\GUISDK\include\OgrePlatform\;$(SolutionDir)Dependencies\GUISDK\include\GUIEngine\;$(SolutionDir)Dependencies\TinyXML\;$(SolutionDir)Dependencies\GUISDK\Common\;%(AdditionalIncludeDirectories);$(SolutionDir)Dependencies\;$(SolutionDir)Dependencies\clapack\include\;$(SolutionDir)Applib\include\</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(OGRE_HOME)\lib\release\;$(SolutionDir)Dependencies\GUISDK\lib\Release\;$(SolutionDir)Dependencies\TinyXML\;$(SolutionDir)Dependencies\clapack\lib;$(SolutionDir)bin\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>OgreMain.lib;OIS.lib;Applib.lib;MyGUI.OgrePlatform.lib;MyGUIEngine.lib;tinyxmlSTL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>LIBCMT.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy $(SolutionDir)Release\AppDemo.exe $(SolutionDir)bin\AppDemo.exe</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="A.cpp" />
+    <ClCompile Include="AnimationEditor.cpp" />
+    <ClCompile Include="AnimationEditorPanel.cpp" />
+    <ClCompile Include="AnimationManager.cpp" />
+    <ClCompile Include="AnimationPanel.cpp" />
+    <ClCompile Include="AxisEntity.cpp" />
+    <ClCompile Include="CommandManager.cpp" />
+    <ClCompile Include="IKSolverTest.cpp" />
+    <ClCompile Include="ImagePanel.cpp" />
+    <ClCompile Include="MainMenuControl.cpp" />
+    <ClCompile Include="Motion.cpp" />
+    <ClCompile Include="MotionGraphs.cpp" />
+    <ClCompile Include="MotionGraphsPanel.cpp" />
+    <ClCompile Include="MotionManager.cpp" />
+    <ClCompile Include="BonePanel.cpp" />
+    <ClCompile Include="MousePicker.cpp" />
+    <ClCompile Include="ObjectPanel.cpp" />
+    <ClCompile Include="MotionSynthesisPanel.cpp" />
+    <ClCompile Include="Path2DManipulator.cpp" />
+    <ClCompile Include="PathEditingEvaluator.cpp" />
+    <ClCompile Include="SceneEntity.cpp" />
+    <ClCompile Include="SceneEntityManager.cpp" />
+    <ClCompile Include="SceneObjectPanel.cpp" />
+    <ClCompile Include="SelectionBox.cpp" />
+    <ClCompile Include="SkeletonManager.cpp" />
+    <ClCompile Include="Animation.cpp" />
+    <ClCompile Include="AppDemo.cpp" />
+    <ClCompile Include="AppUtility.cpp" />
+    <ClCompile Include="Bone.cpp" />
+    <ClCompile Include="BoneAccessor.cpp" />
+    <ClCompile Include="CameraPanel.cpp" />
+    <ClCompile Include="DemoMain.cpp" />
+    <ClCompile Include="IKChain.cpp" />
+    <ClCompile Include="IKSolver.cpp" />
+    <ClCompile Include="Path.cpp" />
+    <ClCompile Include="Skeleton.cpp" />
+    <ClCompile Include="SkeletonView.cpp" />
+    <ClCompile Include="StatePanel.cpp" />
+    <ClCompile Include="UIManager.cpp" />
+    <ClCompile Include="VideoTexture.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="A.h" />
+    <ClInclude Include="AnimationEditor.h" />
+    <ClInclude Include="AnimationEditorPanel.h" />
+    <ClInclude Include="AnimationPanel.h" />
+    <ClInclude Include="AnimationManager.h" />
+    <ClInclude Include="AxisEntity.h" />
+    <ClInclude Include="CommandManager.h" />
+    <ClInclude Include="IKSolverTest.h" />
+    <ClInclude Include="ImagePanel.h" />
+    <ClInclude Include="MainMenuControl.h" />
+    <ClInclude Include="Motion.h" />
+    <ClInclude Include="MotionGraphs.h" />
+    <ClInclude Include="MotionGraphsPanel.h" />
+    <ClInclude Include="MotionManager.h" />
+    <ClInclude Include="BonePanel.h" />
+    <ClInclude Include="MousePicker.h" />
+    <ClInclude Include="ObjectPanel.h" />
+    <ClInclude Include="MotionSynthesisPanel.h" />
+    <ClInclude Include="PanelViewCell.h" />
+    <ClInclude Include="Path2DManipulator.h" />
+    <ClInclude Include="PathEditingEvaluator.h" />
+    <ClInclude Include="RenderBox.h" />
+    <ClInclude Include="RenderBoxScene.h" />
+    <ClInclude Include="SceneEntity.h" />
+    <ClInclude Include="SceneEntityManager.h" />
+    <ClInclude Include="SceneObjectPanel.h" />
+    <ClInclude Include="SelectionBox.h" />
+    <ClInclude Include="SkeletonManager.h" />
+    <ClInclude Include="Animation.h" />
+    <ClInclude Include="AppDemo.h" />
+    <ClInclude Include="AppUtility.h" />
+    <ClInclude Include="Bone.h" />
+    <ClInclude Include="BoneAccessor.h" />
+    <ClInclude Include="CameraPanel.h" />
+    <ClInclude Include="IKChain.h" />
+    <ClInclude Include="IKSolver.h" />
+    <ClInclude Include="Path.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Skeleton.h" />
+    <ClInclude Include="SkeletonView.h" />
+    <ClInclude Include="StatePanel.h" />
+    <ClInclude Include="UIManager.h" />
+    <ClInclude Include="VideoTexture.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="AppDemo.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\bin\media\ico\app.ico" />
+    <None Include="..\bin\media\ico\app_x.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

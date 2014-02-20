@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{20DAB5FA-4C67-4EF4-8A91-1D3684726EE0}</ProjectGuid>
+    <RootNamespace>AppLib</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(ProjectDir)\include;$(SolutionDir)Dependencies\clapack\include;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\clapack\include;</AdditionalLibraryDirectories>
+    </Lib>
+    <PostBuildEvent>
+      <Command>copy $(SolutionDir)Debug\AppLib.lib $(SolutionDir)bin\Applib_d.lib</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>$(ProjectDir)\include;$(SolutionDir)Dependencies\clapack\include\</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+    <Lib>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\clapack\include;</AdditionalLibraryDirectories>
+    </Lib>
+    <PostBuildEvent>
+      <Command>copy $(SolutionDir)Release\AppLib.lib $(SolutionDir)bin\Applib.lib</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="include\HMGPM.h" />
+    <ClInclude Include="include\AMCParser.h" />
+    <ClInclude Include="include\BiasKernel.h" />
+    <ClInclude Include="include\cblaswrap.h" />
+    <ClInclude Include="include\CompoundKernel.h" />
+    <ClInclude Include="include\Distribution.h" />
+    <ClInclude Include="include\Exceptions.h" />
+    <ClInclude Include="include\GaussianDistribution.h" />
+    <ClInclude Include="include\GaussianProcessModel.h" />
+    <ClInclude Include="include\GPLVM.h" />
+    <ClInclude Include="include\Kernel.h" />
+    <ClInclude Include="include\LinearKernel.h" />
+    <ClInclude Include="include\MMatrix.h" />
+    <ClInclude Include="include\MGPKernel.h" />
+    <ClInclude Include="include\MGPM.h" />
+    <ClInclude Include="include\MotionSyn.h" />
+    <ClInclude Include="include\Optimization.h" />
+    <ClInclude Include="include\ParamPriors.h" />
+    <ClInclude Include="include\Quaternion.h" />
+    <ClInclude Include="include\RBFKernel.h" />
+    <ClInclude Include="include\Regularisable.h" />
+    <ClInclude Include="include\ResUtility.h" />
+    <ClInclude Include="include\Transform.h" />
+    <ClInclude Include="include\Transformable.h" />
+    <ClInclude Include="include\Vector3D.h" />
+    <ClInclude Include="include\WhiteNoiseKernel.h" />
+    <ClInclude Include="include\PeriodKernel.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\PeriodKernel.cpp" />
+    <ClCompile Include="src\AMCParser.cpp" />
+    <ClCompile Include="src\BiasKernel.cpp" />
+    <ClCompile Include="src\CompoundKernel.cpp" />
+    <ClCompile Include="src\Distribution.cpp" />
+    <ClCompile Include="src\GaussianDistribution.cpp" />
+    <ClCompile Include="src\GaussianProcessModel.cpp" />
+    <ClCompile Include="src\GPLVM.cpp" />
+    <ClCompile Include="src\HMGPM.cpp" />
+    <ClCompile Include="src\Kernel.cpp" />
+    <ClCompile Include="src\LinearKernel.cpp" />
+    <ClCompile Include="src\MMatrix.cpp" />
+    <ClCompile Include="src\MGPKernel.cpp" />
+    <ClCompile Include="src\MGPM.cpp" />
+    <ClCompile Include="src\MotionSyn.cpp" />
+    <ClCompile Include="src\Optimization.cpp" />
+    <ClCompile Include="src\ParamPriors.cpp" />
+    <ClCompile Include="src\RBFKernel.cpp" />
+    <ClCompile Include="src\Regularisable.cpp" />
+    <ClCompile Include="src\ResUtility.cpp" />
+    <ClCompile Include="src\Transform.cpp" />
+    <ClCompile Include="src\Transformable.cpp" />
+    <ClCompile Include="src\WhiteNoiseKernel.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

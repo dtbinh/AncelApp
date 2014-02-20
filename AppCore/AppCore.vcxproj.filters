@@ -1,0 +1,427 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Kernels">
+      <UniqueIdentifier>{3a13a9ee-4abe-4afa-a2f8-8a8baa947d30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Optimization">
+      <UniqueIdentifier>{d08b55f1-8080-4ea3-b021-875e3a563ed6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Kernels\src">
+      <UniqueIdentifier>{75f5f149-eea7-44ef-b7bd-e49c7787e2be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Optimization\header">
+      <UniqueIdentifier>{66b5bf0a-a1dc-4604-a5bf-546a8f0b1e93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Kernels\header">
+      <UniqueIdentifier>{ac4481f3-0be6-43d4-80e8-63d15aa8a5b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Optimization\src">
+      <UniqueIdentifier>{b4dbdb83-7d44-4d8c-8778-a3fe9f921d2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataMG">
+      <UniqueIdentifier>{91ff2b5d-274f-420c-a8ef-adf4b7ac523d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Export">
+      <UniqueIdentifier>{52c19fc3-47c5-4698-8d49-e6b324605757}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Prior">
+      <UniqueIdentifier>{0c077362-eb01-4bd2-a46f-9a0e675c5dd8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QPBO">
+      <UniqueIdentifier>{c0104b98-db54-4605-8d0a-928003e3655b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataMG\header">
+      <UniqueIdentifier>{5d19f206-2533-4762-a8b4-1011de8b8818}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DataMG\src">
+      <UniqueIdentifier>{bc35d669-7eb0-426d-89ff-9b44be8f5384}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GP">
+      <UniqueIdentifier>{e67a8c7c-18d6-4f51-b66a-9fd2e143d0a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Prior\header">
+      <UniqueIdentifier>{cb34e4dd-4705-44f1-8101-bb3e9b205e48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Prior\src">
+      <UniqueIdentifier>{a631a185-e499-4e11-bc05-68362b49866a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GP\header">
+      <UniqueIdentifier>{27377551-aba3-49a9-befd-0ff295b38a2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GP\src">
+      <UniqueIdentifier>{0fc8a9a2-a770-4141-8fc5-a5d92cfb21a0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="utility">
+      <UniqueIdentifier>{6ac89f9f-3c71-4f65-8bf0-2ea39fe62f3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="embed">
+      <UniqueIdentifier>{c358dd26-5660-4f81-a11c-2ffcaa9bd566}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="backconstraints">
+      <UniqueIdentifier>{a5f21440-34f9-491d-befa-e3f6196c33fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="dynamic">
+      <UniqueIdentifier>{53f474bb-83ff-42a2-9e47-a51a03b4be9e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="backconstraints\CMakeLists.txt">
+      <Filter>backconstraints</Filter>
+    </None>
+    <None Include="dynamics\CMakeLists.txt">
+      <Filter>dynamic</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="kernels\biaskernel.cpp">
+      <Filter>Kernels\src</Filter>
+    </ClCompile>
+    <ClCompile Include="kernels\whitekernel.cpp">
+      <Filter>Kernels\src</Filter>
+    </ClCompile>
+    <ClCompile Include="kernels\compoundkernel.cpp">
+      <Filter>Kernels\src</Filter>
+    </ClCompile>
+    <ClCompile Include="kernels\distkernel.cpp">
+      <Filter>Kernels\src</Filter>
+    </ClCompile>
+    <ClCompile Include="kernels\kernel.cpp">
+      <Filter>Kernels\src</Filter>
+    </ClCompile>
+    <ClCompile Include="kernels\linkernel.cpp">
+      <Filter>Kernels\src</Filter>
+    </ClCompile>
+    <ClCompile Include="kernels\mlpkernel.cpp">
+      <Filter>Kernels\src</Filter>
+    </ClCompile>
+    <ClCompile Include="kernels\rbfkernel.cpp">
+      <Filter>Kernels\src</Filter>
+    </ClCompile>
+    <ClCompile Include="kernels\tensorkernel.cpp">
+      <Filter>Kernels\src</Filter>
+    </ClCompile>
+    <ClCompile Include="optimization\optvariable.cpp">
+      <Filter>Optimization\src</Filter>
+    </ClCompile>
+    <ClCompile Include="optimization\optalgnlopt.cpp">
+      <Filter>Optimization\src</Filter>
+    </ClCompile>
+    <ClCompile Include="optimization\optalgorithm.cpp">
+      <Filter>Optimization\src</Filter>
+    </ClCompile>
+    <ClCompile Include="optimization\optimizable.cpp">
+      <Filter>Optimization\src</Filter>
+    </ClCompile>
+    <ClCompile Include="optimization\optimization.cpp">
+      <Filter>Optimization\src</Filter>
+    </ClCompile>
+    <ClCompile Include="dataexport\matfile.cpp">
+      <Filter>Export</Filter>
+    </ClCompile>
+    <ClCompile Include="dataexport\matreader.cpp">
+      <Filter>Export</Filter>
+    </ClCompile>
+    <ClCompile Include="dataexport\matstruct.cpp">
+      <Filter>Export</Filter>
+    </ClCompile>
+    <ClCompile Include="dataexport\matwriter.cpp">
+      <Filter>Export</Filter>
+    </ClCompile>
+    <ClCompile Include="qpbo\QPBO.cpp">
+      <Filter>QPBO</Filter>
+    </ClCompile>
+    <ClCompile Include="qpbo\QPBO_extra.cpp">
+      <Filter>QPBO</Filter>
+    </ClCompile>
+    <ClCompile Include="qpbo\QPBO_maxflow.cpp">
+      <Filter>QPBO</Filter>
+    </ClCompile>
+    <ClCompile Include="qpbo\QPBO_postprocessing.cpp">
+      <Filter>QPBO</Filter>
+    </ClCompile>
+    <ClCompile Include="datamgmt\datareader.cpp">
+      <Filter>DataMG\src</Filter>
+    </ClCompile>
+    <ClCompile Include="datamgmt\supplementarybvh.cpp">
+      <Filter>DataMG\src</Filter>
+    </ClCompile>
+    <ClCompile Include="datamgmt\datareaderann.cpp">
+      <Filter>DataMG\src</Filter>
+    </ClCompile>
+    <ClCompile Include="datamgmt\datareaderbvh.cpp">
+      <Filter>DataMG\src</Filter>
+    </ClCompile>
+    <ClCompile Include="datamgmt\datareaderbvhquat.cpp">
+      <Filter>DataMG\src</Filter>
+    </ClCompile>
+    <ClCompile Include="datamgmt\joint.cpp">
+      <Filter>DataMG\src</Filter>
+    </ClCompile>
+    <ClCompile Include="datamgmt\supplementary.cpp">
+      <Filter>DataMG\src</Filter>
+    </ClCompile>
+    <ClCompile Include="datamgmt\supplementaryann.cpp">
+      <Filter>DataMG\src</Filter>
+    </ClCompile>
+    <ClCompile Include="priors\rankprior.cpp">
+      <Filter>Prior\src</Filter>
+    </ClCompile>
+    <ClCompile Include="priors\gaussprior.cpp">
+      <Filter>Prior\src</Filter>
+    </ClCompile>
+    <ClCompile Include="priors\logprior.cpp">
+      <Filter>Prior\src</Filter>
+    </ClCompile>
+    <ClCompile Include="priors\noprior.cpp">
+      <Filter>Prior\src</Filter>
+    </ClCompile>
+    <ClCompile Include="priors\prior.cpp">
+      <Filter>Prior\src</Filter>
+    </ClCompile>
+    <ClCompile Include="gp\gp.cpp">
+      <Filter>GP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="gp\gpwithrankprior.cpp">
+      <Filter>GP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="application.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mathutils.cpp">
+      <Filter>utility</Filter>
+    </ClCompile>
+    <ClCompile Include="scriptparser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="embed\embed.cpp">
+      <Filter>embed</Filter>
+    </ClCompile>
+    <ClCompile Include="embed\embedppca.cpp">
+      <Filter>embed</Filter>
+    </ClCompile>
+    <ClCompile Include="backconstraints\backconstraint.cpp">
+      <Filter>backconstraints</Filter>
+    </ClCompile>
+    <ClCompile Include="backconstraints\backconstraintgp.cpp">
+      <Filter>backconstraints</Filter>
+    </ClCompile>
+    <ClCompile Include="backconstraints\backconstraintkbr.cpp">
+      <Filter>backconstraints</Filter>
+    </ClCompile>
+    <ClCompile Include="backconstraints\backconstraintmlp.cpp">
+      <Filter>backconstraints</Filter>
+    </ClCompile>
+    <ClCompile Include="datamgmt\datareaderamc.cpp">
+      <Filter>DataMG\src</Filter>
+    </ClCompile>
+    <ClCompile Include="datamgmt\basicbone.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="datamgmt\basicskeleton.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="datamgmt\supplementaryamc.cpp">
+      <Filter>DataMG\src</Filter>
+    </ClCompile>
+    <ClCompile Include="gp\velocityterm.cpp">
+      <Filter>GP\src</Filter>
+    </ClCompile>
+    <ClCompile Include="dynamics\dynamics.cpp">
+      <Filter>dynamic</Filter>
+    </ClCompile>
+    <ClCompile Include="dynamics\dynamicsacc.cpp">
+      <Filter>dynamic</Filter>
+    </ClCompile>
+    <ClCompile Include="dynamics\dynamicsgp.cpp">
+      <Filter>dynamic</Filter>
+    </ClCompile>
+    <ClCompile Include="dynamics\dynamicsgpacc.cpp">
+      <Filter>dynamic</Filter>
+    </ClCompile>
+    <ClCompile Include="dynamics\dynamicsgpact.cpp">
+      <Filter>dynamic</Filter>
+    </ClCompile>
+    <ClCompile Include="dynamics\dynamicstimegp.cpp">
+      <Filter>dynamic</Filter>
+    </ClCompile>
+    <ClCompile Include="dynamics\transitionreward.cpp">
+      <Filter>dynamic</Filter>
+    </ClCompile>
+    <ClCompile Include="MGPM.cpp">
+      <Filter>GP</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="kernels\biaskernel.h">
+      <Filter>Kernels\header</Filter>
+    </ClInclude>
+    <ClInclude Include="kernels\compoundkernel.h">
+      <Filter>Kernels\header</Filter>
+    </ClInclude>
+    <ClInclude Include="kernels\distkernel.h">
+      <Filter>Kernels\header</Filter>
+    </ClInclude>
+    <ClInclude Include="kernels\kernel.h">
+      <Filter>Kernels\header</Filter>
+    </ClInclude>
+    <ClInclude Include="kernels\linkernel.h">
+      <Filter>Kernels\header</Filter>
+    </ClInclude>
+    <ClInclude Include="kernels\mlpkernel.h">
+      <Filter>Kernels\header</Filter>
+    </ClInclude>
+    <ClInclude Include="kernels\rbfkernel.h">
+      <Filter>Kernels\header</Filter>
+    </ClInclude>
+    <ClInclude Include="kernels\tensorkernel.h">
+      <Filter>Kernels\header</Filter>
+    </ClInclude>
+    <ClInclude Include="kernels\whitekernel.h">
+      <Filter>Kernels\header</Filter>
+    </ClInclude>
+    <ClInclude Include="optimization\optalgnlopt.h">
+      <Filter>Optimization\header</Filter>
+    </ClInclude>
+    <ClInclude Include="optimization\optalgorithm.h">
+      <Filter>Optimization\header</Filter>
+    </ClInclude>
+    <ClInclude Include="optimization\optimizable.h">
+      <Filter>Optimization\header</Filter>
+    </ClInclude>
+    <ClInclude Include="optimization\optimization.h">
+      <Filter>Optimization\header</Filter>
+    </ClInclude>
+    <ClInclude Include="optimization\optvariable.h">
+      <Filter>Optimization\header</Filter>
+    </ClInclude>
+    <ClInclude Include="dataexport\matfile.h">
+      <Filter>Export</Filter>
+    </ClInclude>
+    <ClInclude Include="dataexport\matreader.h">
+      <Filter>Export</Filter>
+    </ClInclude>
+    <ClInclude Include="dataexport\matstruct.h">
+      <Filter>Export</Filter>
+    </ClInclude>
+    <ClInclude Include="dataexport\matwriter.h">
+      <Filter>Export</Filter>
+    </ClInclude>
+    <ClInclude Include="datamgmt\datareader.h">
+      <Filter>DataMG\header</Filter>
+    </ClInclude>
+    <ClInclude Include="datamgmt\datareaderann.h">
+      <Filter>DataMG\header</Filter>
+    </ClInclude>
+    <ClInclude Include="datamgmt\datareaderbvh.h">
+      <Filter>DataMG\header</Filter>
+    </ClInclude>
+    <ClInclude Include="datamgmt\datareaderbvhquat.h">
+      <Filter>DataMG\header</Filter>
+    </ClInclude>
+    <ClInclude Include="datamgmt\joint.h">
+      <Filter>DataMG\header</Filter>
+    </ClInclude>
+    <ClInclude Include="datamgmt\supplementary.h">
+      <Filter>DataMG\header</Filter>
+    </ClInclude>
+    <ClInclude Include="datamgmt\supplementaryann.h">
+      <Filter>DataMG\header</Filter>
+    </ClInclude>
+    <ClInclude Include="datamgmt\supplementarybvh.h">
+      <Filter>DataMG\header</Filter>
+    </ClInclude>
+    <ClInclude Include="priors\gaussprior.h">
+      <Filter>Prior\header</Filter>
+    </ClInclude>
+    <ClInclude Include="priors\logprior.h">
+      <Filter>Prior\header</Filter>
+    </ClInclude>
+    <ClInclude Include="priors\noprior.h">
+      <Filter>Prior\header</Filter>
+    </ClInclude>
+    <ClInclude Include="priors\prior.h">
+      <Filter>Prior\header</Filter>
+    </ClInclude>
+    <ClInclude Include="priors\rankprior.h">
+      <Filter>Prior\header</Filter>
+    </ClInclude>
+    <ClInclude Include="gp\gp.h">
+      <Filter>GP\header</Filter>
+    </ClInclude>
+    <ClInclude Include="gp\gpwithrankprior.h">
+      <Filter>GP\header</Filter>
+    </ClInclude>
+    <ClInclude Include="debugprint.h">
+      <Filter>Export</Filter>
+    </ClInclude>
+    <ClInclude Include="mathutils.h">
+      <Filter>utility</Filter>
+    </ClInclude>
+    <ClInclude Include="embed\embed.h">
+      <Filter>embed</Filter>
+    </ClInclude>
+    <ClInclude Include="embed\embedppca.h">
+      <Filter>embed</Filter>
+    </ClInclude>
+    <ClInclude Include="backconstraints\backconstraint.h">
+      <Filter>backconstraints</Filter>
+    </ClInclude>
+    <ClInclude Include="backconstraints\backconstraintgp.h">
+      <Filter>backconstraints</Filter>
+    </ClInclude>
+    <ClInclude Include="backconstraints\backconstraintkbr.h">
+      <Filter>backconstraints</Filter>
+    </ClInclude>
+    <ClInclude Include="backconstraints\backconstraintmlp.h">
+      <Filter>backconstraints</Filter>
+    </ClInclude>
+    <ClInclude Include="datamgmt\datareaderamc.h">
+      <Filter>DataMG\header</Filter>
+    </ClInclude>
+    <ClInclude Include="datamgmt\basicbone.h" />
+    <ClInclude Include="datamgmt\basicskeleton.h" />
+    <ClInclude Include="qpbo\QPBO.h">
+      <Filter>QPBO</Filter>
+    </ClInclude>
+    <ClInclude Include="datamgmt\supplementaryamc.h">
+      <Filter>DataMG</Filter>
+    </ClInclude>
+    <ClInclude Include="gp\velocityterm.h">
+      <Filter>GP\header</Filter>
+    </ClInclude>
+    <ClInclude Include="dynamics\dynamics.h">
+      <Filter>dynamic</Filter>
+    </ClInclude>
+    <ClInclude Include="dynamics\dynamicsacc.h">
+      <Filter>dynamic</Filter>
+    </ClInclude>
+    <ClInclude Include="dynamics\dynamicsgp.h">
+      <Filter>dynamic</Filter>
+    </ClInclude>
+    <ClInclude Include="dynamics\dynamicsgpacc.h">
+      <Filter>dynamic</Filter>
+    </ClInclude>
+    <ClInclude Include="dynamics\dynamicsgpact.h">
+      <Filter>dynamic</Filter>
+    </ClInclude>
+    <ClInclude Include="dynamics\dynamicstimegp.h">
+      <Filter>dynamic</Filter>
+    </ClInclude>
+    <ClInclude Include="dynamics\transitionreward.h">
+      <Filter>dynamic</Filter>
+    </ClInclude>
+    <ClInclude Include="MGPM.h">
+      <Filter>GP</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

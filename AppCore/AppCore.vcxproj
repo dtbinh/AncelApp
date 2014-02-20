@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{671ED976-97DB-46F5-9888-F09974AFC5E9}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>AppCore</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)kernels\;$(ProjectDir)optimization\;$(ProjectDir)dataexport\;$(SolutionDir)Dependencies\nlopt\;$(ProjectDir)priors\;$(ProjectDir)datamgmt\;$(ProjectDir)qpbo\;$(ProjectDir)gp\;$(ProjectDir)embed\;$(SolutionDir)Dependencies\;$(ProjectDir)backconstraints\;$(ProjectDir)latentprior\;$(ProjectDir)dynamics\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\nlopt\</AdditionalLibraryDirectories>
+      <AdditionalDependencies>nlopt.lib;f2c.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreSpecificDefaultLibraries>LIBCMT.lib</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)kernels\;$(ProjectDir)optimization\;$(ProjectDir)dataexport\;$(SolutionDir)Dependencies\nlopt\;$(ProjectDir)priors\;$(ProjectDir)datamgmt\;$(ProjectDir)qpbo\;$(ProjectDir)gp\;$(ProjectDir)embed\;$(SolutionDir)Dependencies\;$(ProjectDir)backconstraints\;$(ProjectDir)latentprior\;$(ProjectDir)dynamics\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>nlopt.lib;f2c.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\nlopt\</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>LIBCMT.lib;</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="backconstraints\CMakeLists.txt" />
+    <None Include="dynamics\CMakeLists.txt" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="application.cpp" />
+    <ClCompile Include="backconstraints\backconstraint.cpp" />
+    <ClCompile Include="backconstraints\backconstraintgp.cpp" />
+    <ClCompile Include="backconstraints\backconstraintkbr.cpp" />
+    <ClCompile Include="backconstraints\backconstraintmlp.cpp" />
+    <ClCompile Include="dataexport\matfile.cpp" />
+    <ClCompile Include="dataexport\matreader.cpp" />
+    <ClCompile Include="dataexport\matstruct.cpp" />
+    <ClCompile Include="dataexport\matwriter.cpp" />
+    <ClCompile Include="datamgmt\basicbone.cpp" />
+    <ClCompile Include="datamgmt\basicskeleton.cpp" />
+    <ClCompile Include="datamgmt\datareader.cpp" />
+    <ClCompile Include="datamgmt\datareaderamc.cpp" />
+    <ClCompile Include="datamgmt\datareaderann.cpp" />
+    <ClCompile Include="datamgmt\datareaderbvh.cpp" />
+    <ClCompile Include="datamgmt\datareaderbvhquat.cpp" />
+    <ClCompile Include="datamgmt\joint.cpp" />
+    <ClCompile Include="datamgmt\supplementary.cpp" />
+    <ClCompile Include="datamgmt\supplementaryamc.cpp" />
+    <ClCompile Include="datamgmt\supplementaryann.cpp" />
+    <ClCompile Include="datamgmt\supplementarybvh.cpp" />
+    <ClCompile Include="dynamics\dynamics.cpp" />
+    <ClCompile Include="dynamics\dynamicsacc.cpp" />
+    <ClCompile Include="dynamics\dynamicsgp.cpp" />
+    <ClCompile Include="dynamics\dynamicsgpacc.cpp" />
+    <ClCompile Include="dynamics\dynamicsgpact.cpp" />
+    <ClCompile Include="dynamics\dynamicstimegp.cpp" />
+    <ClCompile Include="dynamics\transitionreward.cpp" />
+    <ClCompile Include="embed\embed.cpp" />
+    <ClCompile Include="embed\embedppca.cpp" />
+    <ClCompile Include="gp\gp.cpp" />
+    <ClCompile Include="gp\gpwithrankprior.cpp" />
+    <ClCompile Include="gp\velocityterm.cpp" />
+    <ClCompile Include="kernels\biaskernel.cpp" />
+    <ClCompile Include="kernels\compoundkernel.cpp" />
+    <ClCompile Include="kernels\distkernel.cpp" />
+    <ClCompile Include="kernels\kernel.cpp" />
+    <ClCompile Include="kernels\linkernel.cpp" />
+    <ClCompile Include="kernels\mlpkernel.cpp" />
+    <ClCompile Include="kernels\rbfkernel.cpp" />
+    <ClCompile Include="kernels\tensorkernel.cpp" />
+    <ClCompile Include="kernels\whitekernel.cpp" />
+    <ClCompile Include="mathutils.cpp" />
+    <ClCompile Include="MGPM.cpp" />
+    <ClCompile Include="optimization\optalgnlopt.cpp" />
+    <ClCompile Include="optimization\optalgorithm.cpp" />
+    <ClCompile Include="optimization\optimizable.cpp" />
+    <ClCompile Include="optimization\optimization.cpp" />
+    <ClCompile Include="optimization\optvariable.cpp" />
+    <ClCompile Include="priors\gaussprior.cpp" />
+    <ClCompile Include="priors\logprior.cpp" />
+    <ClCompile Include="priors\noprior.cpp" />
+    <ClCompile Include="priors\prior.cpp" />
+    <ClCompile Include="priors\rankprior.cpp" />
+    <ClCompile Include="qpbo\QPBO.cpp" />
+    <ClCompile Include="qpbo\QPBO_extra.cpp" />
+    <ClCompile Include="qpbo\QPBO_maxflow.cpp" />
+    <ClCompile Include="qpbo\QPBO_postprocessing.cpp" />
+    <ClCompile Include="scriptparser.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="backconstraints\backconstraint.h" />
+    <ClInclude Include="backconstraints\backconstraintgp.h" />
+    <ClInclude Include="backconstraints\backconstraintkbr.h" />
+    <ClInclude Include="backconstraints\backconstraintmlp.h" />
+    <ClInclude Include="dataexport\matfile.h" />
+    <ClInclude Include="dataexport\matreader.h" />
+    <ClInclude Include="dataexport\matstruct.h" />
+    <ClInclude Include="dataexport\matwriter.h" />
+    <ClInclude Include="datamgmt\basicbone.h" />
+    <ClInclude Include="datamgmt\basicskeleton.h" />
+    <ClInclude Include="datamgmt\datareader.h" />
+    <ClInclude Include="datamgmt\datareaderamc.h" />
+    <ClInclude Include="datamgmt\datareaderann.h" />
+    <ClInclude Include="datamgmt\datareaderbvh.h" />
+    <ClInclude Include="datamgmt\datareaderbvhquat.h" />
+    <ClInclude Include="datamgmt\joint.h" />
+    <ClInclude Include="datamgmt\supplementary.h" />
+    <ClInclude Include="datamgmt\supplementaryamc.h" />
+    <ClInclude Include="datamgmt\supplementaryann.h" />
+    <ClInclude Include="datamgmt\supplementarybvh.h" />
+    <ClInclude Include="debugprint.h" />
+    <ClInclude Include="dynamics\dynamics.h" />
+    <ClInclude Include="dynamics\dynamicsacc.h" />
+    <ClInclude Include="dynamics\dynamicsgp.h" />
+    <ClInclude Include="dynamics\dynamicsgpacc.h" />
+    <ClInclude Include="dynamics\dynamicsgpact.h" />
+    <ClInclude Include="dynamics\dynamicstimegp.h" />
+    <ClInclude Include="dynamics\transitionreward.h" />
+    <ClInclude Include="embed\embed.h" />
+    <ClInclude Include="embed\embedppca.h" />
+    <ClInclude Include="gp\gp.h" />
+    <ClInclude Include="gp\gpwithrankprior.h" />
+    <ClInclude Include="gp\velocityterm.h" />
+    <ClInclude Include="kernels\biaskernel.h" />
+    <ClInclude Include="kernels\compoundkernel.h" />
+    <ClInclude Include="kernels\distkernel.h" />
+    <ClInclude Include="kernels\kernel.h" />
+    <ClInclude Include="kernels\linkernel.h" />
+    <ClInclude Include="kernels\mlpkernel.h" />
+    <ClInclude Include="kernels\rbfkernel.h" />
+    <ClInclude Include="kernels\tensorkernel.h" />
+    <ClInclude Include="kernels\whitekernel.h" />
+    <ClInclude Include="mathutils.h" />
+    <ClInclude Include="MGPM.h" />
+    <ClInclude Include="optimization\optalgnlopt.h" />
+    <ClInclude Include="optimization\optalgorithm.h" />
+    <ClInclude Include="optimization\optimizable.h" />
+    <ClInclude Include="optimization\optimization.h" />
+    <ClInclude Include="optimization\optvariable.h" />
+    <ClInclude Include="priors\gaussprior.h" />
+    <ClInclude Include="priors\logprior.h" />
+    <ClInclude Include="priors\noprior.h" />
+    <ClInclude Include="priors\prior.h" />
+    <ClInclude Include="priors\rankprior.h" />
+    <ClInclude Include="qpbo\QPBO.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
